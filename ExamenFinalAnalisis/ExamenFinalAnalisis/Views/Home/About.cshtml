@@ -1,0 +1,40 @@
+@{
+    ViewData["Title"] = "Acerca de";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="page-header">
+    <h1>Acerca de</h1>
+    <p>Información sobre este proyecto y sus objetivos.</p>
+</section>
+
+<section class="about-content">
+    <div class="about-block">
+        <h2>&#127919; Objetivo</h2>
+        <p>
+            Esta aplicación fue desarrollada como parte de un examen final,
+            demostrando el uso de ASP.NET Core MVC con una arquitectura limpia
+            y buenas prácticas de desarrollo.
+        </p>
+    </div>
+
+    <div class="about-block">
+        <h2>&#128736; Tecnologías usadas</h2>
+        <ul>
+            <li>ASP.NET Core MVC (.NET 9)</li>
+            <li>C# como lenguaje principal</li>
+            <li>Razor Views (.cshtml)</li>
+            <li>CSS y JavaScript nativos</li>
+            <li>Docker para contenedorización</li>
+        </ul>
+    </div>
+
+    <div class="about-block">
+        <h2>&#128100; Desarrollador</h2>
+        <p>Proyecto desarrollado con Rider IDE sobre .NET 9.</p>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/js/animaciones/about.js" asp-append-version="true"></script>
+}

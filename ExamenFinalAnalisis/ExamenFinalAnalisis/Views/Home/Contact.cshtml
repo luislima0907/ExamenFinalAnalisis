@@ -1,0 +1,45 @@
+@{
+    ViewData["Title"] = "Contacto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="page-header">
+    <h1>Contacto</h1>
+    <p>¿Tienes alguna pregunta? Envíanos un mensaje.</p>
+</section>
+
+<section class="contact-section">
+    <div class="contact-form-wrapper">
+        <div id="form-success" class="alert-success" style="display:none;">
+            ✅ ¡Mensaje enviado correctamente!
+        </div>
+
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Tu nombre" />
+        </div>
+
+        <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" placeholder="correo@ejemplo.com" />
+        </div>
+
+        <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" rows="5" placeholder="Escribe tu mensaje..."></textarea>
+        </div>
+
+        <button id="btn-enviar" class="btn-primary">Enviar mensaje</button>
+    </div>
+
+    <div class="contact-info">
+        <h2>&#128205; Información</h2>
+        <p>&#128231; contacto@miapp.com</p>
+        <p>&#128222; +502 0000-0000</p>
+        <p>&#127968; Guatemala</p>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/js/animaciones/contact.js" asp-append-version="true"></script>
+}

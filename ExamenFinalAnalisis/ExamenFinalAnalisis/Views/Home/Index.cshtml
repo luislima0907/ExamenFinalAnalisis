@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Inicio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Bienvenido</h1>
+        <p>Esta es la página principal de la aplicación.</p>
+        <a href="#info" class="btn-primary">Conocer más</a>
+    </div>
+</section>
+
+<section id="info" class="cards-section">
+    <div class="card">
+        <h2>&#128196; Proyecto</h2>
+        <p>Aplicación web desarrollada con ASP.NET Core MVC y .NET 9.</p>
+    </div>
+    <div class="card">
+        <h2>&#128736; Tecnología</h2>
+        <p>Backend en C#, vistas con Razor, estilos en CSS puro y scripts en JS.</p>
+    </div>
+    <div class="card">
+        <h2>&#128640; Deploy</h2>
+        <p>Configurada con Docker para despliegue en Render u otras plataformas cloud.</p>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/js/animaciones/index.js" asp-append-version="true"></script>
+}

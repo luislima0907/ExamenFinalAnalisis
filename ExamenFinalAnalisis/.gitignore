@@ -1,0 +1,28 @@
+﻿# Build outputs
+bin/
+obj/
+
+# Rider IDE
+.idea/
+
+# Visual Studio
+.vs/
+
+# Archivos de usuario de VS
+*.user
+*.suo
+
+# Logs
+*.log
+
+# Variables de entorno / secretos
+*.env
+.env
+
+# NuGet
+*.nupkg
+packages/
+
+# OS
+.DS_Store
+Thumbs.db
