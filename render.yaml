@@ -13,4 +13,4 @@ services:
         value: Production
       - key: SQLITE_PATH
         value: /app/enviosgt.db
-    healthCheckPath: /swagger/index.html
+    healthCheckPath: /

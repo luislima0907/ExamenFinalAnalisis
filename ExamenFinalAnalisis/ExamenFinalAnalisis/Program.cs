@@ -72,11 +72,13 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-// Swagger disponible siempre (incluido en Render) en /swagger.
+// Swagger disponible siempre (incluido en Render). Se sirve en la raíz "/"
+// para que el enlace de Render abra directamente la documentación de la API.
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Envíos Rápidos GT API v1");
+    c.RoutePrefix = string.Empty; // Swagger UI en "/"
 });
 
 app.UseStaticFiles();

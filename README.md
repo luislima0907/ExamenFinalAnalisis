@@ -70,8 +70,8 @@ dotnet build
 # 3. Ejecutar la API
 dotnet run --project ExamenFinalAnalisis
 
-# La API queda disponible (puerto local 8080 por defecto, o el de launchSettings):
-#   Swagger UI:  http://localhost:8080/swagger
+# La API queda disponible en el puerto de launchSettings (5041):
+#   Swagger UI (raíz):  http://localhost:5041/
 ```
 
 > La base de datos SQLite (`enviosgt.db`) se crea automáticamente al iniciar.
@@ -145,7 +145,7 @@ curl http://localhost:8080/api/envios/ENV-20260613-0001
 curl http://localhost:8080/api/reportes/eficiencia
 ```
 
-> **La forma más simple de probar todo:** abrir **`/swagger`** en el navegador.
+> **La forma más simple de probar todo:** abrir la **raíz `/`** en el navegador (Swagger UI).
 
 ---
 
@@ -173,8 +173,8 @@ El proyecto se despliega con **Docker** (`ExamenFinalAnalisis/ExamenFinalAnalisi
 3. **Root Directory / Docker Context:** `ExamenFinalAnalisis/ExamenFinalAnalisis`
    (carpeta donde está el `Dockerfile` y el `.csproj`).
 4. Render detecta el puerto mediante la variable `PORT` (ya manejada en `Program.cs`).
-5. *Create Web Service* → al terminar el build, la API queda en
-   `https://<tu-servicio>.onrender.com/swagger`.
+5. *Create Web Service* → al terminar el build, la API (Swagger UI) queda en
+   `https://<tu-servicio>.onrender.com/`.
 
 > **Nota:** SQLite usa el sistema de archivos del contenedor; en el plan gratuito de
 > Render el almacenamiento es efímero (los datos se reinician al redeplegar). Es
