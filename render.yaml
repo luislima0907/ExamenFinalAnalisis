@@ -1,0 +1,16 @@
+# Blueprint de despliegue para Render.com
+# Despliega la API REST de Envíos Rápidos GT usando Docker.
+services:
+  - type: web
+    name: enviosgt-api
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./ExamenFinalAnalisis/ExamenFinalAnalisis/Dockerfile
+    dockerContext: ./ExamenFinalAnalisis/ExamenFinalAnalisis
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: SQLITE_PATH
+        value: /app/enviosgt.db
+    healthCheckPath: /swagger/index.html

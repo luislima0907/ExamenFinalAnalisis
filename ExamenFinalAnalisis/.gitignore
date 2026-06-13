@@ -15,6 +15,11 @@ obj/
 # Logs
 *.log
 
+# Base de datos SQLite (se genera en tiempo de ejecución)
+*.db
+*.db-shm
+*.db-wal
+
 # Variables de entorno / secretos
 *.env
 .env
